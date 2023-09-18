@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "grade": 85
+  },
+  {
+    "id": 2,
+    "name": "Alice Smith",
+    "grade": 90
+  },
+  {
+    "id": 3,
+    "name": "Bob Johnson",
+    "grade": 78
+  },
+  {
+    "id": 4,
+    "name": "Eve Davis",
+    "grade": 95
+  }
+]

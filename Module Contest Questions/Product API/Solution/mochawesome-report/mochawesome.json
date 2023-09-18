@@ -1,0 +1,176 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-09-17T07:42:06.944Z",
+    "end": "2023-09-17T07:42:07.163Z",
+    "duration": 219,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "868af51e-c436-4239-9034-00f604c154e0",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cef0c634-a530-487e-8717-94157c3f0be6",
+          "title": "Product API",
+          "fullFile": "D:\\Newton\\Contest_Question_Product\\Contest_Product_API\\__tests__\\test.js",
+          "file": "\\__tests__\\test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should create a new product",
+              "fullTitle": "Product API should create a new product",
+              "timedOut": false,
+              "duration": 162,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const product = { name: 'Sample Product', price: 20.99 };\nchai\n  .request(app)\n  .post('/api/products')\n  .send(product)\n  .end((err, res) => {\n    expect(res).to.have.status(201);\n    expect(res.body).to.be.an('object');\n    expect(res.body.message).to.equal('Product created');\n    expect(res.body.product).to.have.property('id');\n    expect(res.body.product.name).to.equal(product.name);\n    expect(res.body.product.price).to.equal(product.price);\n    done();\n  });",
+              "err": {},
+              "uuid": "9dcb96a5-2aa4-4d27-ae8b-2b0f7f997366",
+              "parentUUID": "cef0c634-a530-487e-8717-94157c3f0be6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should get all products",
+              "fullTitle": "Product API should get all products",
+              "timedOut": false,
+              "duration": 6,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "chai\n  .request(app)\n  .get('/api/products')\n  .end((err, res) => {\n    expect(res).to.have.status(200);\n    expect(res.body).to.be.an('array');\n    done();\n  });",
+              "err": {},
+              "uuid": "40116e35-c5e3-4c9b-918f-9fd28930159e",
+              "parentUUID": "cef0c634-a530-487e-8717-94157c3f0be6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should update an existing product",
+              "fullTitle": "Product API should update an existing product",
+              "timedOut": false,
+              "duration": 9,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const updatedProductData = { name: 'Updated Product Name', price: 25.99 };\nchai\n  .request(app)\n  .patch('/api/products/4')\n  .send(updatedProductData)\n  .end((err, res) => {\n    expect(res).to.have.status(200);\n    expect(res.body).to.be.an('object');\n    expect(res.body.message).to.equal('Product updated');\n    expect(res.body.product).to.have.property('id');\n    expect(res.body.product.name).to.equal(updatedProductData.name);\n    expect(res.body.product.price).to.equal(updatedProductData.price);\n    done();\n  });",
+              "err": {},
+              "uuid": "741834e9-e2c8-48fe-845d-969ac79ff63f",
+              "parentUUID": "cef0c634-a530-487e-8717-94157c3f0be6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should delete an existing product",
+              "fullTitle": "Product API should delete an existing product",
+              "timedOut": false,
+              "duration": 11,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "chai\n  .request(app)\n  .delete('/api/products/5')\n  .end((err, res) => {\n    expect(res).to.have.status(200);\n    expect(res.body).to.be.an('object');\n    expect(res.body.message).to.equal('Product deleted');\n    done();\n  });",
+              "err": {},
+              "uuid": "a3b73e3b-64e9-43a3-80ca-cf153aaf167d",
+              "parentUUID": "cef0c634-a530-487e-8717-94157c3f0be6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should get a product by ID",
+              "fullTitle": "Product API should get a product by ID",
+              "timedOut": false,
+              "duration": 11,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const productId = 3;\nchai\n  .request(app)\n  .get(`/api/products/${productId}`)\n  .end((err, res) => {\n    expect(res).to.have.status(200);\n    expect(res.body).to.be.an('object');\n    expect(res.body).to.have.property('id', productId);\n    done();\n  });",
+              "err": {},
+              "uuid": "62e34cee-cd89-4437-8c51-a14e06bbb546",
+              "parentUUID": "cef0c634-a530-487e-8717-94157c3f0be6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9dcb96a5-2aa4-4d27-ae8b-2b0f7f997366",
+            "40116e35-c5e3-4c9b-918f-9fd28930159e",
+            "741834e9-e2c8-48fe-845d-969ac79ff63f",
+            "a3b73e3b-64e9-43a3-80ca-cf153aaf167d",
+            "62e34cee-cd89-4437-8c51-a14e06bbb546"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 199,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 60000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 60000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.1.0"
+    }
+  }
+}
