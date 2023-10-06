@@ -26,6 +26,8 @@ const BlogPost = () => {
   // console.log(post.tag);
   if (!post) return <p>Blog post not found</p>;
 
+  const blogContentWithBreaks = post.description.replace(/\n/g, '<br />');
+
   return (
     <div className="blog-post">
       <div className="blog-img">
@@ -39,7 +41,7 @@ const BlogPost = () => {
       <p className="blog-tags">{post.tag && post.tag.map((tag, tagIdx) => (
         <div key={tagIdx} className="tag">{tag}</div>
       ))}</p>
-      <p>{post.description}</p>
+      <p dangerouslySetInnerHTML={{ __html: blogContentWithBreaks }}></p>
     </div>
   );
 };
