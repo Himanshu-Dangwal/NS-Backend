@@ -5,6 +5,7 @@ import blog from "../data/data.json";
 import { get } from "@/utils/api";
 import { AuthContextData } from "@/context/AuthContext";
 import parseDate from "@/utils/parseDate";
+import Link from "next/link";
 
 const BlogPost = () => {
   const [blogs, setBlogs] = useState([]);
@@ -26,6 +27,7 @@ const BlogPost = () => {
   // console.log(post.tag);
   if (!post) return <p>Blog post not found</p>;
 
+  // post.description
   const blogContentWithBreaks = post.description.replace(/\n/g, '<br />');
 
   return (
@@ -39,9 +41,9 @@ const BlogPost = () => {
         <p>{parseDate(post.createdAt)}</p>
       </div>
       <p className="blog-tags">{post.tag && post.tag.map((tag, tagIdx) => (
-        <div key={tagIdx} className="tag">{tag}</div>
+        <div key={tagIdx} className="tag"><Link href={`/category/${tag}`}>{tag}</Link></div>
       ))}</p>
-      <p dangerouslySetInnerHTML={{ __html: blogContentWithBreaks }}></p>
+      <p className="blog-content" dangerouslySetInnerHTML={{ __html: blogContentWithBreaks }}></p>
     </div>
   );
 };

@@ -119,7 +119,7 @@ export default function Login() {
         ) : (
           <h1 className="your-blogs">Your Blogs</h1>
         )}
-        {filteredBlogs.map((blog) => (
+        {filteredBlogs.reverse().map((blog) => (
           <div key={blog._id} className="blog-container-individual">
             <Blog
               id={blog._id}
@@ -128,6 +128,7 @@ export default function Login() {
               author={blog.username}
               date={parseDate(blog.createdAt)}
               tags={blog.tag}
+              imageUrl={blog.imageUrl}
             />
             <Link className="read-more" href={`/${blog._id}`}>
               Read More
