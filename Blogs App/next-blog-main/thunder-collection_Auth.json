@@ -1,0 +1,121 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Auth",
+    "dateExported": "2023-09-30T13:59:46.616Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "63d1c569-1b5d-43c4-8a94-22cf195e154a",
+            "colId": "2515256f-acf9-4d72-8dc1-93f58fcbc860",
+            "containerId": "",
+            "name": "create user",
+            "url": "http://127.0.0.1:8080/api/auth/createuser",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-09-21T18:51:19.579Z",
+            "modified": "2023-09-21T18:51:53.807Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\" : \"RamuhuDa\",\n  \"email\" : \"himdadsshu@ghanshu.com\",\n  \"password\" : \"himandswdsshu@123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9c0d1604-5b57-4d36-b468-5855295e2b9c",
+            "colId": "2515256f-acf9-4d72-8dc1-93f58fcbc860",
+            "containerId": "",
+            "name": "login user",
+            "url": "http://127.0.0.1:8080/api/auth/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-09-21T18:53:19.860Z",
+            "modified": "2023-09-21T18:53:57.348Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\" : \"HimanshuDa\",\n  \"password\" : \"himanshu@123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "cf95ddb7-ff77-492a-ae67-0f87f40924bf",
+            "colId": "2515256f-acf9-4d72-8dc1-93f58fcbc860",
+            "containerId": "",
+            "name": "get logged in user details",
+            "url": "http://127.0.0.1:8080/api/auth/getuser",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-09-21T18:56:42.818Z",
+            "modified": "2023-09-21T19:01:52.789Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwYmZlMDhmZGEyYjcwZmZhNmEwMTc3In0sImlhdCI6MTY5NTMyMjQzN30.vla5ASR_c11264XXjyXEdjVeImd7T5ygGZGHjLr5b7Y"
+            },
+            "tests": []
+        },
+        {
+            "_id": "149bb803-88d3-4d67-a606-5ddab22d37c8",
+            "colId": "2515256f-acf9-4d72-8dc1-93f58fcbc860",
+            "containerId": "",
+            "name": "create user 2",
+            "url": "http://127.0.0.1:8080/api/auth/createuser",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-09-27T10:10:54.367Z",
+            "modified": "2023-09-27T10:11:50.257Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\" : \"Apoorv\",\n  \"email\" : \"apoorv@gmail.com\",\n  \"password\" : \"asdafdasffs\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c0162172-96b3-4ca8-93db-cd4b4754b50b",
+            "colId": "2515256f-acf9-4d72-8dc1-93f58fcbc860",
+            "containerId": "",
+            "name": "Login user 2",
+            "url": "http://127.0.0.1:8080/api/auth/login",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-09-27T10:12:06.319Z",
+            "modified": "2023-09-27T10:13:26.899Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\" : \"Apoorv\",\n  \"password\" : \"asdafdasffs\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5c3f0963-58b5-43eb-ab70-114dec0aa01c",
+            "colId": "2515256f-acf9-4d72-8dc1-93f58fcbc860",
+            "containerId": "",
+            "name": "Logggin in user info 2",
+            "url": "http://127.0.0.1:8080/api/auth/getuser",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-09-27T10:13:45.687Z",
+            "modified": "2023-09-27T10:14:55.695Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUxM2ZmZTYzZTFlMzYzYmVkM2EwZjM4In0sImlhdCI6MTY5NTgwOTYwNn0.qBgmBCzIS5XmuzcaRMEwpWuiST2DRWyYFDIDlubf5Cw"
+            },
+            "tests": []
+        }
+    ]
+}

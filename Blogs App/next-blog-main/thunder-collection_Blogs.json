@@ -1,0 +1,210 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Blogs",
+    "dateExported": "2023-09-30T13:59:24.980Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "24e4f8a1-99cd-4fa8-ad09-4d7a6e5a14f4",
+            "colId": "fe407cf5-3609-40ad-bc90-88ac60b43b60",
+            "containerId": "",
+            "name": "Add New Blog",
+            "url": "http://127.0.0.1:8080/api/blogs/addBlog",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-09-21T19:05:35.112Z",
+            "modified": "2023-09-27T12:12:50.896Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Himanshu's Blog\",\n  \"description\": \"Himanshu Loves to code and is good at DSA\",\n  \"tag\": \"C++\"\n}\n",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwYmZlMDhmZGEyYjcwZmZhNmEwMTc3In0sImlhdCI6MTY5NTMyMjQzN30.vla5ASR_c11264XXjyXEdjVeImd7T5ygGZGHjLr5b7Y"
+            },
+            "tests": []
+        },
+        {
+            "_id": "006044b3-9024-432b-bfd4-4af8df57e9a7",
+            "colId": "fe407cf5-3609-40ad-bc90-88ac60b43b60",
+            "containerId": "",
+            "name": "fetchAllBlogs",
+            "url": "http://127.0.0.1:8080/api/blogs/",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-09-27T09:59:11.952Z",
+            "modified": "2023-09-27T09:59:30.812Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "521b3705-d7d5-4654-a7b4-7043f035b7c8",
+            "colId": "fe407cf5-3609-40ad-bc90-88ac60b43b60",
+            "containerId": "",
+            "name": "Fetch all blogs of a user",
+            "url": "http://127.0.0.1:8080/api/profile",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-09-27T10:09:00.841Z",
+            "modified": "2023-09-27T10:10:27.178Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwYmZlMDhmZGEyYjcwZmZhNmEwMTc3In0sImlhdCI6MTY5NTMyMjQzN30.vla5ASR_c11264XXjyXEdjVeImd7T5ygGZGHjLr5b7Y"
+            },
+            "tests": []
+        },
+        {
+            "_id": "54eacf99-65a8-4d88-ad6c-617134ce3d83",
+            "colId": "fe407cf5-3609-40ad-bc90-88ac60b43b60",
+            "containerId": "",
+            "name": "Add new blog apoorv",
+            "url": "http://127.0.0.1:8080/api/blogs/addBlog",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-09-27T10:15:14.364Z",
+            "modified": "2023-09-27T12:11:18.549Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Apoorv's Blog 2\",\n  \"description\": \"This is a sample blog description for my blog. 2\",\n  \"tag\": \"Technology and Science Evolution\"\n}\n",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUxM2ZmZTYzZTFlMzYzYmVkM2EwZjM4In0sImlhdCI6MTY5NTgwOTYwNn0.qBgmBCzIS5XmuzcaRMEwpWuiST2DRWyYFDIDlubf5Cw"
+            },
+            "tests": []
+        },
+        {
+            "_id": "0b30de87-b8a2-4835-9102-516e8db0c53d",
+            "colId": "fe407cf5-3609-40ad-bc90-88ac60b43b60",
+            "containerId": "",
+            "name": "Fetch Apoorv's Blog",
+            "url": "http://127.0.0.1:8080/api/profile",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-09-27T10:16:31.013Z",
+            "modified": "2023-09-27T10:17:03.021Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUxM2ZmZTYzZTFlMzYzYmVkM2EwZjM4In0sImlhdCI6MTY5NTgwOTYwNn0.qBgmBCzIS5XmuzcaRMEwpWuiST2DRWyYFDIDlubf5Cw"
+            },
+            "tests": []
+        },
+        {
+            "_id": "e2c171ad-7b92-48eb-96b2-43616913383f",
+            "colId": "fe407cf5-3609-40ad-bc90-88ac60b43b60",
+            "containerId": "",
+            "name": "Update a Blog",
+            "url": "http://127.0.0.1:8080/api/blogs/updateBlog/65141c423ab0383495e5c3d8",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2023-09-27T12:13:35.735Z",
+            "modified": "2023-09-27T12:46:38.523Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Himanshu's Blog\",\n  \"description\": \"Himanshu Loves to code and is good at DSA\",\n  \"tag\": \"Java\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwYmZlMDhmZGEyYjcwZmZhNmEwMTc3In0sImlhdCI6MTY5NTMyMjQzN30.vla5ASR_c11264XXjyXEdjVeImd7T5ygGZGHjLr5b7Y"
+            },
+            "tests": []
+        },
+        {
+            "_id": "485f36a4-af18-4193-9b89-ac8ba92de4c5",
+            "colId": "fe407cf5-3609-40ad-bc90-88ac60b43b60",
+            "containerId": "",
+            "name": "Delete a blog",
+            "url": "http://127.0.0.1:8080/api/blogs/deleteBlog/65141c423ab0383495e5c3d8",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2023-09-27T12:48:06.447Z",
+            "modified": "2023-09-27T12:48:27.066Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwYmZlMDhmZGEyYjcwZmZhNmEwMTc3In0sImlhdCI6MTY5NTMyMjQzN30.vla5ASR_c11264XXjyXEdjVeImd7T5ygGZGHjLr5b7Y"
+            },
+            "tests": []
+        },
+        {
+            "_id": "b2bba664-f1ea-4c89-9425-5d551b9a831b",
+            "colId": "fe407cf5-3609-40ad-bc90-88ac60b43b60",
+            "containerId": "",
+            "name": "Add Comment To a Blog",
+            "url": "http://127.0.0.1:8080/api/blogs/addComment/65141c0e3ab0383495e5c3d6",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2023-09-27T13:26:41.167Z",
+            "modified": "2023-09-27T13:54:36.971Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"message\" : \"Himanshu is a nice boy\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUxM2ZmZTYzZTFlMzYzYmVkM2EwZjM4In0sImlhdCI6MTY5NTgwOTYwNn0.qBgmBCzIS5XmuzcaRMEwpWuiST2DRWyYFDIDlubf5Cw"
+            },
+            "tests": []
+        },
+        {
+            "_id": "1b54e1b4-f584-4332-b909-45b560e6879b",
+            "colId": "fe407cf5-3609-40ad-bc90-88ac60b43b60",
+            "containerId": "",
+            "name": "Adding a nested comment",
+            "url": "http://127.0.0.1:8080/api/blogs/addComment/65141c0e3ab0383495e5c3d6",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2023-09-27T13:59:12.587Z",
+            "modified": "2023-09-27T14:02:34.631Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"message\" : \"This is a nested comment\",\n  \"parentCommentId\" : \"651434da5c6b263daad249e9\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwYmZlMDhmZGEyYjcwZmZhNmEwMTc3In0sImlhdCI6MTY5NTMyMjQzN30.vla5ASR_c11264XXjyXEdjVeImd7T5ygGZGHjLr5b7Y"
+            },
+            "tests": []
+        },
+        {
+            "_id": "58ae6647-087e-45a7-8eb5-e9e2a1562cd1",
+            "colId": "fe407cf5-3609-40ad-bc90-88ac60b43b60",
+            "containerId": "",
+            "name": "Upvote",
+            "url": "http://127.0.0.1:8080/api/blogs/upvote/651402c43ab0383495e5c3d2",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2023-09-27T17:25:12.005Z",
+            "modified": "2023-09-27T17:26:37.432Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUxM2ZmZTYzZTFlMzYzYmVkM2EwZjM4In0sImlhdCI6MTY5NTgwOTYwNn0.qBgmBCzIS5XmuzcaRMEwpWuiST2DRWyYFDIDlubf5Cw"
+            },
+            "tests": []
+        }
+    ]
+}
