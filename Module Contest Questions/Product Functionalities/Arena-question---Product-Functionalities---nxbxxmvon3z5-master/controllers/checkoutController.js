@@ -2,54 +2,51 @@ const Product = require('../models/productModel');
 
 const processCheckout = async (req, res) => {
   try {
-    // TODO: Fetch all products from the database
-    // const products = await Product.find();
+    // Fetch all products
+    const products = await Product.find();
 
-    // TODO: Check if any products were found, if not, send a 404 response
-    // if (!products || products.length === 0) {
-    //   return res.status(404).json({ message: 'No products found' });
-    // }
+    if (!products || products.length === 0) {
+      return res.status(404).json({ message: 'No products found' });
+    }
 
     let shouldProceedToCheckout = false;
 
-    // TODO: Loop through the products and check if quantity is greater than 1
-    // for (const product of products) {
-    //   if (product.quantity > 1) {
-    //     shouldProceedToCheckout = true;
-    //     break;
-    //   }
-    // }
+    for (const product of products) {
+      // Check if quantity is less than or equal to 1 after adding quantity
+      if (product.quantity + 1 > 1) {
+        shouldProceedToCheckout = true;
+        break;
+      }
+    }
 
-    // TODO: If shouldProceedToCheckout is false, send a response indicating no products with quantity > 1
-    // if (!shouldProceedToCheckout) {
-    //   return res.status(400).json({
-    //     message: 'No products with quantity > 1. Cannot proceed to checkout.',
-    //   });
-    // }
+    if (!shouldProceedToCheckout) {
+      return res.status(400).json({
+        message: 'No products with quantity > 1. Cannot proceed to checkout.',
+      });
+    }
 
-    // TODO: Calculate the total cost by looping through products and applying pricing logic
-    // let totalCost = 0;
-    // for (const product of products) {
-    //   // Consider your pricing logic, for simplicity, let's assume price * quantity
-    //   totalCost += product.price * product.quantity;
-    // }
+    // Calculate the total cost
+    let totalCost = 0;
 
-    // TODO: Apply a discount if the total cost is more than a certain amount
-    // if (totalCost > 100) {
-    //   const discountAmount = 0.2 * totalCost; // 20% discount
-    //   totalCost -= discountAmount;
-    // }
+    for (const product of products) {
+      // Consider your pricing logic, for simplicity, let's assume price * quantity
+      totalCost += product.price * product.quantity;
+    }
 
-    // TODO: Respond with a payment confirmation, total cost, and product details
+    // Apply discount if total cost is more than 100
+    if (totalCost > 100) {
+      const discountAmount = 0.2 * totalCost; // 20% discount
+      totalCost -= discountAmount;
+    }
+
     // For simplicity, we'll respond with a payment confirmation
-    // res.status(200).json({
-    //   message: 'Payment successful',
-    //   totalCost,
-    //   products,
-    // });
+    return res.status(200).json({
+      message: 'Payment successful',
+      totalCost,
+      products,
+    });
   } catch (error) {
-    // Handle any errors and send an error response
-    // res.status(500).json({ message: 'Internal server error', error });
+    return res.status(500).json({ message: 'Internal server error', error });
   }
 };
 
